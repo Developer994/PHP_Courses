@@ -78,9 +78,28 @@
 
     // Merging two arrays:
     $peopleThree = array_merge($peopleOne, $peopleTwo);
-    print_r($peopleThree)
+    // print_r($peopleThree)
+
     // Associative arrays
     
+    $ninjasOne = ['shaun' => 'black', 'mario' => 'orange', 'luigi' => 'brown'];
+    // If you want to print only one of the values inside the arrays, we use echo like so:
+    // echo $ninjasOne ['mario'];
+
+    // If you want to print the entire array, we use print_r like so:
+    // print_r($ninjasOne);
+
+    $ninjasTwo = array('bowser' => 'green', 'peach'=>'yellow');
+    // print_r($ninjasTwo);
+
+    $ninjasTwo['peach'] = 'pink';
+    // print_r($ninjasTwo);
+
+    // echo count($ninjasOne);
+
+    $ninjasThree = array_merge($ninjasOne, $ninjasTwo);
+    print_r($ninjasThree);
+
 
 ?>
 
