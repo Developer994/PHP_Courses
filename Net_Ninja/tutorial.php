@@ -52,54 +52,36 @@
     // echo ceil($pi);
 
     // Different ways of outputting arrays:
-    // Indexed arrays
-    $peopleOne = ['shaun', 'cystal', 'ryu'];
 
-    $peopleTwo = array('ken', 'chen-li');
+    // multi-dimensional arrays
 
-    // When you have to print an array with numbers, it will give an error because all echoed values need to be a string.
-    $ages = [20, 30, 40, 50];
+    // $blogs = [
+    //     ['mario party', 'mario', 'lorem', 30],
+    //     ['mario kart cheats', 'toad', 'lorem', 25],
+    //     ['zelda hidden chests', 'link', 'lorem', 50]
+    // ];
 
-    // Overriding a value inside the array:
-    $ages[1] = 25;
-    
-    // print_r($ages);
+    // To output nested values of a set of arrays amongst arrays, we do the following:
+    // print_r($blogs[0][0])
 
-    // Adding more values to an array:
+    $blogs = [
+        ['title'=>'mario party','author'=>'mario', 'content'=>'lorem', 'likes'=>30],
+        ['title'=>'mario kart cheats', 'author'=>'toad', 'content'=>'lorem','likes'=>25],
+        ['title'=>'zelda hidden chests', 'author'=>'link', 'content'=>'lorem', 'likes'=>50]
+    ];
 
-    $ages[] = 60; // First way 
+    // To target an index within a category(such as author, as shown below), we do the following:
+    // echo $blogs[2]['author'];
 
-    array_push($ages, 70); // Second way
+    // echo count($blogs);
 
-    // print_r($ages);
 
-    // To count how many variables are inside an array, we use echo count like so:
-    // echo count($ages);
+    // We add more data to an array by doing the following:
+    $blogs[] = ['title' => 'castle party', 'author'=>'peach', 'content'=>'lorem', 'likes'=>100];
+    print_r($blogs);
 
-    // Merging two arrays:
-    $peopleThree = array_merge($peopleOne, $peopleTwo);
-    // print_r($peopleThree)
-
-    // Associative arrays
-    
-    $ninjasOne = ['shaun' => 'black', 'mario' => 'orange', 'luigi' => 'brown'];
-    // If you want to print only one of the values inside the arrays, we use echo like so:
-    // echo $ninjasOne ['mario'];
-
-    // If you want to print the entire array, we use print_r like so:
-    // print_r($ninjasOne);
-
-    $ninjasTwo = array('bowser' => 'green', 'peach'=>'yellow');
-    // print_r($ninjasTwo);
-
-    $ninjasTwo['peach'] = 'pink';
-    // print_r($ninjasTwo);
-
-    // echo count($ninjasOne);
-
-    $ninjasThree = array_merge($ninjasOne, $ninjasTwo);
-    print_r($ninjasThree);
-
+    $popped = array_pop($blogs);
+    print_r($popped);
 
 ?>
 
