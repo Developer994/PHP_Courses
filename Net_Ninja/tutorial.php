@@ -85,52 +85,85 @@
     // print_r($popped);
 
 
-    // Loops
+    // // Loops
 
-    // for loop
+    // // for loop
 
-    $ninjas = ['Rex', 'Haui', 'Yoshi'];
+    // $ninjas = ['Rex', 'Haui', 'Yoshi'];
 
-    for($i = 0; $i < count($ninjas); $i++){
-        echo $ninjas[$i] . '<br />'; // You have to add a . for concatenating the <br/>.
-    }
+    // for($i = 0; $i < count($ninjas); $i++){
+    //     echo $ninjas[$i] . '<br />'; // You have to add a . for concatenating the <br/>.
+    // }
 
-    // foreach loop
-    // The following foreach loop performs the same action as the above for loop, giving you the same result.
+    // // foreach loop
+    // // The following foreach loop performs the same action as the above for loop, giving you the same result.
 
-    foreach($ninjas as $ninja) {
-        echo $ninja . '<br/>';
-    }
+    // foreach($ninjas as $ninja) {
+    //     echo $ninja . '<br/>';
+    // }
 
-    $products = [
-        ['name' => 'shiny star', 'price' => 20],
-        ['name' => 'green shell', 'price' => 10],
-        ['name' => 'red shell', 'price' => 15],
-        ['name' => 'gold coin', 'price' => 5],
-        ['name' => 'lightning bolt', 'price' => 40],
-        ['name' => 'banana skin', 'price' => 2]
-    ];
+    // $products = [
+    //     ['name' => 'shiny star', 'price' => 20],
+    //     ['name' => 'green shell', 'price' => 10],
+    //     ['name' => 'red shell', 'price' => 15],
+    //     ['name' => 'gold coin', 'price' => 5],
+    //     ['name' => 'lightning bolt', 'price' => 40],
+    //     ['name' => 'banana skin', 'price' => 2]
+    // ];
 
-    foreach($products as $product){
-        echo $product['name'] . ' - ' . $product['price'];
-        echo '<br/>';
-    }
+    // foreach($products as $product){
+    //     echo $product['name'] . ' - ' . $product['price'];
+    //     echo '<br/>';
+    // }
 
-    $i = 0;
+    // $i = 0;
 
-    // While loop
+    // // While loop
 
-    while($i < count($products)){
-        echo $products[$i]['name'];
-        echo '<br/>';
-        $i++;
-    }
+    // while($i < count($products)){
+    //     echo $products[$i]['name'];
+    //     echo '<br/>';
+    //     $i++;
+    // }
 
+    // // Boolean in PHP
+
+    // // Echoeing true on to the browser will give you a "1", because 1 is a truthy value.
+    // echo true;
+
+    // // Echoeing falseon to the browser will give you a "", because an empty string is falsey.
+    // echo false;
+
+    // // numbers
+    // // Boolean can also be used for determining if one number is greater, less or equal to the other:
+    // echo 5 < 10; // This would be true("1")
+    // echo 5 > 10; // This would give you false("")
+
+    // // Comparing strings:
+    // // If the first letter of the first string comes before the first letter of the second string,
+    // // then it will give you true if you say string one is less than string two:
+    // echo 'george' < 'shaun';
+
+    // // Case sensitivity:
+    // // Uppercase letters are seen as less than a lowercase letter:
+    // echo 'george' > 'George';
+
+    // // To see if two words are equal or not, we use double equal signs(==):
+    // echo 'mario' == 'mario';
+    // echo 'mario' == 'Mario';
+
+    // // Loose vs strict equal comparison:
+    // echo 5 == '5'; // Two equal signs would be loose equal, which means 5 and '5' are loosely equal
+    //                // but not strictly equal.
+
+    echo 5 === '5'; // This will check if both the digits are ints or not, as it wil check whether or not
+                    // they're strictly equal.
+    
 
 ?>
 
 
-<!-- foreach loop example inside html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,16 +173,6 @@
     <title>PHP Tutorials</title>
 </head>
 <body>
-
-<h1>Products</h1>
-<ul>
-<?php foreach($products as $product){?> <!-- Here, we start a tag for the foreach loop.-->
-
-    <h3><?php echo $product['name']; ?></h3>
-    <p>$ <?php echo $product['price']; ?> </p>
-
-<?php } ?> <!-- Here, we close the tag for the foreach loop.-->
-</ul>
 
 </body>
 </html>
