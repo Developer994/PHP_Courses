@@ -64,11 +64,11 @@
     // To output nested values of a set of arrays amongst arrays, we do the following:
     // print_r($blogs[0][0])
 
-    $blogs = [
-        ['title'=>'mario party','author'=>'mario', 'content'=>'lorem', 'likes'=>30],
-        ['title'=>'mario kart cheats', 'author'=>'toad', 'content'=>'lorem','likes'=>25],
-        ['title'=>'zelda hidden chests', 'author'=>'link', 'content'=>'lorem', 'likes'=>50]
-    ];
+    // $blogs = [
+    //     ['title'=>'mario party','author'=>'mario', 'content'=>'lorem', 'likes'=>30],
+    //     ['title'=>'mario kart cheats', 'author'=>'toad', 'content'=>'lorem','likes'=>25],
+    //     ['title'=>'zelda hidden chests', 'author'=>'link', 'content'=>'lorem', 'likes'=>50]
+    // ];
 
     // To target an index within a category(such as author, as shown below), we do the following:
     // echo $blogs[2]['author'];
@@ -76,15 +76,61 @@
     // echo count($blogs);
 
 
-    // We add more data to an array by doing the following:
-    $blogs[] = ['title' => 'castle party', 'author'=>'peach', 'content'=>'lorem', 'likes'=>100];
-    print_r($blogs);
+    // // We add more data to an array by doing the following:
+    // $blogs[] = ['title' => 'castle party', 'author'=>'peach', 'content'=>'lorem', 'likes'=>100];
+    // print_r($blogs);
 
-    $popped = array_pop($blogs);
-    print_r($popped);
+    // // We can remove data from an array by using the pop function:
+    // $popped = array_pop($blogs);
+    // print_r($popped);
+
+
+    // Loops
+
+    // for loop
+
+    $ninjas = ['Rex', 'Haui', 'Yoshi'];
+
+    for($i = 0; $i < count($ninjas); $i++){
+        echo $ninjas[$i] . '<br />'; // You have to add a . for concatenating the <br/>.
+    }
+
+    // foreach loop
+    // The following foreach loop performs the same action as the above for loop, giving you the same result.
+
+    foreach($ninjas as $ninja) {
+        echo $ninja . '<br/>';
+    }
+
+    $products = [
+        ['name' => 'shiny star', 'price' => 20],
+        ['name' => 'green shell', 'price' => 10],
+        ['name' => 'red shell', 'price' => 15],
+        ['name' => 'gold coin', 'price' => 5],
+        ['name' => 'lightning bolt', 'price' => 40],
+        ['name' => 'banana skin', 'price' => 2]
+    ];
+
+    foreach($products as $product){
+        echo $product['name'] . ' - ' . $product['price'];
+        echo '<br/>';
+    }
+
+    $i = 0;
+
+    // While loop
+
+    while($i < count($products)){
+        echo $products[$i]['name'];
+        echo '<br/>';
+        $i++;
+    }
+
 
 ?>
 
+
+<!-- foreach loop example inside html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,6 +140,16 @@
     <title>PHP Tutorials</title>
 </head>
 <body>
+
+<h1>Products</h1>
+<ul>
+<?php foreach($products as $product){?> <!-- Here, we start a tag for the foreach loop.-->
+
+    <h3><?php echo $product['name']; ?></h3>
+    <p>$ <?php echo $product['price']; ?> </p>
+
+<?php } ?> <!-- Here, we close the tag for the foreach loop.-->
+</ul>
 
 </body>
 </html>
