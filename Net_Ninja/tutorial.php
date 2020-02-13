@@ -193,24 +193,40 @@
 //             }
 //     }
 
-$products = [
-        ['name' => 'shiny star', 'price' => 20],
-        ['name' => 'green shell', 'price' => 10],
-        ['name' => 'red shell', 'price' => 15],
-        ['name' => 'gold coin', 'price' => 5],
-        ['name' => 'lightning bolt', 'price' => 40],
-        ['name' => 'banana skin', 'price' => 2]
-    ];
+// $products = [
+//         ['name' => 'shiny star', 'price' => 20],
+//         ['name' => 'green shell', 'price' => 10],
+//         ['name' => 'red shell', 'price' => 15],
+//         ['name' => 'gold coin', 'price' => 5],
+//         ['name' => 'lightning bolt', 'price' => 40],
+//         ['name' => 'banana skin', 'price' => 2]
+//     ];
 
-foreach($products as $product){
-    if($product['name'] === 'lightning bolt'){
-    break;
+// foreach($products as $product){
+//     if($product['name'] === 'lightning bolt'){
+//     break;
+//     }
+//     if($product['price'] > 15){
+//         continue;
+//     }
+//     echo $product['name'] . '</br>';
+// }
+
+// Functions
+
+    function sayHello($name = 'Rick' , $time = 'morning'){
+        echo "good $time $name";
     }
-    if($product['price'] > 15){
-        continue;
+
+    sayHello('yoshi', 'night');
+
+    function formatProduct($product){
+        // echo "{$product['name']} costs {$product['price']} to buy <br />";
+        return "{$product['name']} costs {$product['price']} to buy <br />";
     }
-    echo $product['name'] . '</br>';
-}
+
+    $formatted = formatProduct(['name' => 'gold star', 'price' => 20]);
+    echo $formatted;
 ?>
 
 
