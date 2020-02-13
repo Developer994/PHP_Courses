@@ -212,21 +212,21 @@
 //     echo $product['name'] . '</br>';
 // }
 
-// Functions
+// // Functions
 
-    function sayHello($name = 'Rick' , $time = 'morning'){
-        echo "good $time $name";
-    }
+//     function sayHello($name = 'Rick' , $time = 'morning'){
+//         echo "good $time $name";
+//     }
 
-    sayHello('yoshi', 'night');
+//     sayHello('yoshi', 'night');
 
-    function formatProduct($product){
-        // echo "{$product['name']} costs {$product['price']} to buy <br />";
-        return "{$product['name']} costs {$product['price']} to buy <br />";
-    }
+//     function formatProduct($product){
+//         // echo "{$product['name']} costs {$product['price']} to buy <br />";
+//         return "{$product['name']} costs {$product['price']} to buy <br />";
+//     }
 
-    $formatted = formatProduct(['name' => 'gold star', 'price' => 20]);
-    echo $formatted;
+//     $formatted = formatProduct(['name' => 'gold star', 'price' => 20]);
+//     echo $formatted;
 ?>
 
 
