@@ -227,6 +227,37 @@
 
 //     $formatted = formatProduct(['name' => 'gold star', 'price' => 20]);
 //     echo $formatted;
+
+
+// // Function Scoping
+
+// $name = 'mario';
+
+// function sayHello(){
+// // In order to have the above variable outputted using this function,
+// // you must put global when calling the variable:
+//     global $name;
+//     // To override the $name, we can just rename the variable like so:
+//     $name = 'yoshi';
+//     echo "hello $name";
+// }
+
+// sayHello();
+// // Changing the $name variable to 'yoshi' also changes the variable outside
+// // of the function:
+// echo $name;
+
+// // Adding the And percent (&) to the function's parameter will change the variable $name to wario  
+// // even outside the function:
+
+// function sayBye(&$name){
+//     $name = 'wario';
+//     echo "Bye $name";
+// }
+
+// sayBye($name);
+// echo $name;
+
 ?>
 
 
