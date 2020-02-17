@@ -258,6 +258,13 @@
 // sayBye($name);
 // echo $name;
 
+// Include and Require 
+
+// Check the include.php, include2.php and content.php files for 
+// some examples of this session.
+
+// Project & Footer
+// Check the Project folder for the project.
 ?>
 
 
