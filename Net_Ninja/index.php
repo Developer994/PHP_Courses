@@ -24,7 +24,8 @@
     mysqli_close($conn);
 
     // print_r($pizzas);
-    explode(',', $pizzas[0]['ingredients'])
+    // explode(',', $pizzas[0]['ingredients'])
+?>
 
 <!DOCTYPE html>
 <html>
