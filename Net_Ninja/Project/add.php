@@ -45,7 +45,19 @@
             $errors['ingredients'] = 'Ingredients must be a comma seperated list';
         }
     }
-}
+
+    // This checks to see if there are errors or not. 
+    // If there are errors, you will get the error below echoed.
+    // If not, you will get an echo of the form being valid
+    // and you will be directed back to the main index.php page.
+    if(array_filter($errors)){
+        echo 'errors in the form ';
+    } else {
+        echo 'form is valid';
+        header('Location: index.php');
+    }
+
+} // end of POST Check
 
 
 ?>
