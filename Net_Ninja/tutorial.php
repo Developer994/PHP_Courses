@@ -265,6 +265,29 @@
 
 // Project & Footer
 // Check the Project folder for the project.
+
+ // Ternary operators
+
+//  $score = 50;
+
+//  // if($score > 40){
+//  //     echo 'high score!';
+//  // } else {
+//  //     echo 'low score :(';
+//  // }
+ 
+//  echo $score > 40 ? 'high score!' : 'low score :(';
+
+// Superglobals
+
+// $_GET['name'], $_POST['name']
+
+// The following will show properties of the server based on the input put in (e.g. SERVER_NAME, REQUEST_METHOD)
+echo $_SERVER['SERVER_NAME'] . '<br/>';
+echo $_SERVER['REQUEST_METHOD'] . '<br/>';
+echo $_SERVER['PHP_SELF'] . '<br/>';
+echo $_SERVER['SCRIPT_FILENAME'] . '<br/>';
+
 ?>
 
 
