@@ -1,3 +1,18 @@
+<?php
+
+    session_start();
+
+    // $_SESSION['name'] = 'yoshi'; 
+
+    if($_SERVER['QUERY_STRING'] == 'noname'){
+        // unset($_SESSION['name']);
+        session_unset();
+    }
+
+    $name = $_SESSION['name'];
+
+?>
+
 <head>
     <title>Ninja Pizza</title>
     <!-- Compiled and minified CSS -->
@@ -28,6 +43,7 @@
         <div class="container">
             <a href="/PHP_Courses/Net_Ninja/index.php" class="brand-logo brand-text">Ninja Pizza</a>
             <ul id="nav-mobile" class="right hand-on-small-and-down">
+                <li class="grey-text">Hello <?php echo htmlspecialchars($name); ?></li>
                 <li><a href="add.php" class="btn brand z-depth-0">Add a Pizza</a></li>
             </ul>
         </div>

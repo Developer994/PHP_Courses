@@ -1,18 +1,6 @@
 <?php
 
-    // Ternary operators
-
-    $score = 50;
-
-    // if($score > 40){
-    //     echo 'high score!';
-    // } else {
-    //     echo 'low score :(';
-    // }
-    
-    echo $score > 40 ? 'high score!' : 'low score :(';
-
-    
+   
 
 ?>
 

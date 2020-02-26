@@ -278,15 +278,28 @@
  
 //  echo $score > 40 ? 'high score!' : 'low score :(';
 
-// Superglobals
+// // Superglobals
 
-// $_GET['name'], $_POST['name']
+// // $_GET['name'], $_POST['name']
 
-// The following will show properties of the server based on the input put in (e.g. SERVER_NAME, REQUEST_METHOD)
-echo $_SERVER['SERVER_NAME'] . '<br/>';
-echo $_SERVER['REQUEST_METHOD'] . '<br/>';
-echo $_SERVER['PHP_SELF'] . '<br/>';
-echo $_SERVER['SCRIPT_FILENAME'] . '<br/>';
+// // The following will show properties of the server based on the input put in (e.g. SERVER_NAME, REQUEST_METHOD)
+// echo $_SERVER['SERVER_NAME'] . '<br/>';
+// echo $_SERVER['REQUEST_METHOD'] . '<br/>';
+// echo $_SERVER['PHP_SELF'] . '<br/>';
+// echo $_SERVER['SCRIPT_FILENAME'] . '<br/>';
+
+// Sessions
+
+if(isset($_POST['submit'])){
+
+    session_start();
+
+    $_SESSION['name'] = $_POST['name'];
+    echo $_SESSION['name'];
+
+    header('Location: index.php');
+}
+
 
 ?>
 
@@ -300,5 +313,10 @@ echo $_SERVER['SCRIPT_FILENAME'] . '<br/>';
 </head>
 <body>
     
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST"> 
+        <input type="text" name="name" id="">
+        <input type="submit" name="submit" value="submit">
+    </form>
+
 </body>
 </html>
