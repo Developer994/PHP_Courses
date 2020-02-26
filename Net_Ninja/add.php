@@ -1,5 +1,7 @@
 <?php
     
+    include('config/db_connect.php');
+
     // Errors
     // Here we've tweaked the codes to show errors.
 
@@ -51,10 +53,26 @@
     // If not, you will get an echo of the form being valid
     // and you will be directed back to the main index.php page.
     if(array_filter($errors)){
-        echo 'errors in the form ';
+        // echo 'errors in the form';
     } else {
-        echo 'form is valid';
-        header('Location: index.php');
+
+        // The following will protect the database against malicious codes
+        // that can be stored.
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $title = mysqli_real_escape_string($conn, $_POST['title']);
+        $ingredients = mysqli_real_escape_string($conn, $_POST['ingredients']);
+
+        // Create sql
+        $sql = "INSERT INTO pizzas(title,email,ingredients) VALUES('$title', '$email', '$ingredients')";
+
+        // Save to db and check
+        if(mysqli_query($conn, $sql)){
+            // success 
+            header('Location: index.php');  
+        } else {
+            // error
+            echo 'Query Error: ' . mysqli_error($conn);
+        }
     }
 
 } // end of POST Check
@@ -65,7 +83,7 @@
 <!DOCTYPE html>
 <html>
 
-    <?php include('header.php'); ?>
+    <?php include('Project/header.php'); ?>
 
     <section class="container grey-text">
         <h4 class="center">Add a pizza</h4>
@@ -85,6 +103,6 @@
         </form>
     </section>
 
-    <?php include('footer.php'); ?>
+    <?php include('Project/footer.php'); ?>
     
 </html>

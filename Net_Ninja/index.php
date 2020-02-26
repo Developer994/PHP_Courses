@@ -7,6 +7,8 @@
     // such as fetching the data and outputting the data in a listed list through the HTML
     // portion.
 
+    include('config/db_connect.php');
+
     // connect to database
     $conn = mysqli_connect('localhost', 'lolter', 'Test1234', 'ninja_pizza');
 
@@ -60,7 +62,7 @@
                         </ul>
                     </div>
                     <div class="card-action right-align">
-                        <a href="#" class="brand-text">more info</a>
+                        <a href="details.php?id=<?php echo $pizza['id']?>" class="brand-text">more info</a>
                     </div>
                 </div>
             </div>
