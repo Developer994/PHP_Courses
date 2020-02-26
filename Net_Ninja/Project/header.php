@@ -14,6 +14,13 @@
         max-width: 460px;
         padding: 20px;
     }
+    .pizza{
+        width: 100px;
+        margin: 40px auto -30px;
+        display: block;
+        position: relative;
+        top: -30px;
+    }
     </style>
 </head>
 <body class="grey lighten-4">
@@ -21,7 +28,7 @@
         <div class="container">
             <a href="/PHP_Courses/Net_Ninja/index.php" class="brand-logo brand-text">Ninja Pizza</a>
             <ul id="nav-mobile" class="right hand-on-small-and-down">
-                <li><a href="Project/add.php" class="btn brand z-depth-0">Add a Pizza</a></li>
+                <li><a href="add.php" class="btn brand z-depth-0">Add a Pizza</a></li>
             </ul>
         </div>
     </nav>    
