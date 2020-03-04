@@ -288,21 +288,57 @@
 // echo $_SERVER['PHP_SELF'] . '<br/>';
 // echo $_SERVER['SCRIPT_FILENAME'] . '<br/>';
 
-// Sessions
+// // Sessions
 
-if(isset($_POST['submit'])){
+// // Added cookies to the code.
+// if(isset($_POST['submit'])){
 
-    // The 86400 is the seconds before expiration.
-    setcookie('gender', $_POST['gender'], time() + 86400);
+//     // The 86400 is the seconds before expiration.
+//     setcookie('gender', $_POST['gender'], time() + 86400);
 
-    session_start();
+//     session_start();
 
-    $_SESSION['name'] = $_POST['name'];
-    echo $_SESSION['name'];
+//     $_SESSION['name'] = $_POST['name'];
+//     echo $_SESSION['name'];
 
-    header('Location: index.php');
-}
+//     header('Location: index.php');
+// }
 
+// File system part 1
+
+    // $quotes = readfile('readme.txt');
+    // echo $quotes;
+    $file = 'readme.txt';
+
+    // If the file exists
+    if(file_exists($file)){
+
+        // // Read file
+        // echo readfile($file) . '<br/>';
+
+        // // Copy file
+        // //    The file to copy from($file), the new file to create(quotes.txt)
+        // copy($file, 'quotes.txt');
+
+        // // Absolute patg
+        // echo realpath($file) . '<br/>';
+
+        // // File size
+        // echo filesize($file) . '<br/>';
+
+        // // Rename file
+        // rename($file, 'test.txt');
+
+
+
+    } else {
+
+        echo 'file does not exist';
+
+    }
+
+    // Make dir
+    mkdir('quotes');
 
 ?>
 
@@ -316,14 +352,6 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     
-    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST"> 
-        <input type="text" name="name" id="">
-        <select name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select>
-        <input type="submit" name="submit" value="submit">
-    </form>
 
 </body>
 </html>
