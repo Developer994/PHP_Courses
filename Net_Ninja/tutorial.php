@@ -308,10 +308,10 @@
 
     // $quotes = readfile('readme.txt');
     // echo $quotes;
-    $file = 'readme.txt';
+    // $file = 'readme.txt';
 
-    // If the file exists
-    if(file_exists($file)){
+    // // If the file exists
+    // if(file_exists($file)){
 
         // // Read file
         // echo readfile($file) . '<br/>';
@@ -331,15 +331,50 @@
 
 
 
-    } else {
+    // } else {
 
-        echo 'file does not exist';
+    //     echo 'file does not exist';
 
-    }
+    // }
 
-    // Make dir
-    mkdir('quotes');
+    // // Make dir
+    // mkdir('quotes');
 
+    $file = 'quotes.txt';
+    
+    // // The following code is used to select a file and take an action with it, for example:
+    // // $handle = fopen(the variable that contains the file ($file in this case), the action to be taken('r' for read)) 
+    // $handle = fopen($file, 'r');
+
+    // // Read the opened file of the above:
+    // // echo fread(the variable made to open a file, how many bytes that will be read)
+    // echo fread($handle, filesize($file));
+
+    // // To just read a certain amount of the characters, we do:
+    // // echo fread(the variable used to open the file, how many characters that need to be read)
+    // echo fread($handle, 40);
+
+    // // Reading a single line:
+    // echo fgets($handle);
+
+    // // Reading a single character:
+    // echo fgetc($handle);
+
+    // // For reading and writing, we add a plus in front of the r in $handle:
+    // $handle = fopen($file, 'r+');
+
+    // fwrite($handle, "\nEverything popular is wrong");
+    // echo fread($handle, filesize($file));
+
+    // // // If you want to add a new line at the end of the text, do the following:
+    // $handle = fopen($file, 'a+');
+    // // fwrite($handle, "\nEverything popular is wrong");
+    
+    // // Closing a file:
+    // fclose($handle);
+    
+    // // Deleting a file
+    // unlink($file);
 ?>
 
 
